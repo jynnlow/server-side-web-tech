@@ -5,16 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Wandering Wasp</title>
+  <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon">
   <link href="/vendors/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark nav-color">
+  <nav class="navbar navbar-expand-sm navbar-dark nav-color">
     <div class="container-fluid">
       <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
         <a class="navbar-brand" href="#">
-          <img src="/assets/icon.png" alt="" width="70" height="70" class="d-inline-block mx-2 me-4">The Wandering Wasp
+          <img src="/assets/icons/icon.png" alt="" width="70" height="70" class="d-inline-block mx-2 me-4">The Wandering Wasp
         </a>
         <ul class="navbar-nav mb-2 mb-lg-0">
           <li class="nav-item">
@@ -39,28 +39,107 @@
       </div>
     </div>
   </nav>
-  <div class="container-fluid">
-    <!-- Slider main container -->
-    <div class="swiper-container mt-5">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        ...
+  <div id="homepageCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
       </div>
-      <!-- If we need pagination -->
-      <div class="swiper-pagination"></div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
+      <div class="carousel-inner carousel-height ">
+        <div class="carousel-item active carousel-height ">
+            <img src="/assets/images/image1.jpg " class="carousel-image" style="top: -70px;"  alt="...">
+        </div>
+        <div class="carousel-item" style="height: 750px">
+          <img src="/assets/images/image2.jpg " class="carousel-image" style="top: -150px;"  alt="...">
+        </div>
+        <div class="carousel-item" style="height: 750px">
+          <img src="/assets/images/image3.jpg " class="carousel-image" style="top: -300px;"  alt="...">
+        </div>
+        <div class="carousel-item" style="height: 750px">
+          <img src="/assets/images/image5.jpg " class="carousel-image" style="top: -250px;"  alt="...">
+        </div>
+        <div class="carousel-item" style="height: 750px">
+          <img src="/assets/images/image6.jpg " class="carousel-image" style="top: -200px;"  alt="...">
+        </div>
+        <div class="carousel-item" style="height: 750px">
+          <img src="/assets/images/image7.jpg " class="carousel-image" style="top: -300px;"  alt="...">
+        </div>
+        <div class="carousel-item" style="height: 750px">
+          <img src="/assets/images/image9.jpg " class="carousel-image" style="top: -300px;"  alt="...">
+        </div>
+        <div class="carousel-item" style="height: 750px">
+          <img src="/assets/images/image12.jpg " class="carousel-image" style="top: -300px;"  alt="...">
+        </div>
+        <div class="carousel-item" style="height: 750px">
+          <img src="/assets/images/image13.jpg " class="carousel-image" style="top: -300px;"  alt="...">
+        </div>
+        <div class="carousel-item" style="height: 750px">
+          <img src="/assets/images/image14.jpg " class="carousel-image" style="top: -350px;"  alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel"  data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel"  data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
   </div>
+  <!-- <div class="card" style="margin: 50px;"> 
+    <div>
+      <p style="padding: 50px 0;">Experiencing the world with two wheels</p>
+    </div>
+    <div class="bg-image" style="width: 100%; height: 800px; background-image: url('./assets/images/profile.jpg'); background-position: 75% 20%">
+        <p>Some text here</p>
+    </div>
+  </div> -->
+  <div class="container-fluid " style="padding-top:50px; padding-bottom:50px">
+    <div class="title-border text-center my-5 fs-2" >
+      <p class="mb-0">WHO AM I?</p>
+    </div>
+    <div class="d-flex justify-content-evenly text-center">
+      <div>
+        <div>
+          <img src="/assets/icons/woman.png" alt="">
+        </div>
+        <p class="my-3 fs-5">A Woman
+        </p>
+      </div>
+      <div>
+        <div>
+          <img src="/assets/icons/scooter.png" alt="">
+        </div>
+        <p class="my-3 fs-5">A Motorcycle Traveller
+        </p>
+      </div>
+      <div>
+        <div>
+          <img src="/assets/icons/book.png" alt="">
+        </div>
+        <p class="my-3 fs-5">A Storyteller
+        </p>
+      </div>
+    </div>
+    <div class="text-justify" style="padding: 50px 300px">
+      <p>A perpetual learner of the world driven by an insatiable curiosity. 
+        Undaunted of what lies beyond the comfort zone for raw experiences, 
+        I am always setting new travel goals. 
+        Travelling has allowed me to witness the beauties and tragedies of this world which were transformative to my outlooks. 
+        What I eventually discovered is the gap between our perspectives and reality on the ground in places beyond the borders. 
+        Through storytelling, I hope to forge connection, especially in a time when humanity is overshadowed by dooming media portrayal of the outside world.
+      </p>
+    </div>
+
+  </div>
+  
   <footer>
     <div class="container-fluid nav-color">
       <div class="d-flex justify-content-center pt-4 pb-1"> 
@@ -77,16 +156,16 @@
       </div>
       <div class="d-flex justify-content-center "> 
         <a class="icon" href="" style="background-color: #3B5998;">
-          <img class="img-fluid" src="/assets/facebook.png">
+          <img class="img-fluid" src="/assets/icons/facebook.png">
         </a>
         <a class="icon" href="" style="background-image: linear-gradient(to bottom left,#7162D9,#C72FA2,#DF4E6B,orange, yellow);">
-          <img class="img-fluid" src="/assets/instagram.png">
+          <img class="img-fluid" src="/assets/icons/instagram.png">
         </a>
         <a class="icon" href="" style="background-color: #B00101;">
-          <img class="img-fluid" src="/assets/youtube.png">
+          <img class="img-fluid" src="/assets/icons/youtube.png">
         </a>
         <a class="icon" href="" style="background-color: white;">
-          <img class="img-fluid" src="/assets/gmail.png">
+          <img class="img-fluid" src="/assets/icons/gmail.png">
         </a>
       </div>
       <div class="d-flex justify-content-between px-3" style="color:#E1A0A8;">
@@ -102,24 +181,7 @@
 </body>
 </html>
 <script src="/vendors/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script>
-  const swiper = new Swiper('.swiper-container', {
-  // Optional parameters
-  direction: 'horizontal',
-  loop: true,
-
-  // If we need pagination
-  pagination: {
-    el: '.swiper-pagination',
-  },
-
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-
-});
+  var myCarousel = document.getElementById('homepageCarousel')
+  var carousel = new bootstrap.Carousel(myCarousel)
 </script>
