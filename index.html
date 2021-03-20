@@ -8,9 +8,77 @@
   <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
   <link href="./vendors/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="sweetalert2.min.css">
 </head>
 <body>
-  <nav class="navbar navbar-expand-sm navbar-dark nav-color">
+  <div class="modal fade" id="signupModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title main-color">Sign Up</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center">
+          <form>
+            <div class="g-3">
+              <label for="inputEmail1" class="col-form-label">Email Address</label>
+              <input type="email" class="form-control" id="inputEmail1">
+              <span id="emailHelp" class="form-text">
+                We'll never share your email with anyone else.
+              </span>
+            </div>
+            <div class="g-3">
+              <label for="inputEmail1" class="col-form-label">Username</label>
+              <input type="text" class="form-control" id="inputUsername">
+            </div>
+            <div class="g-3">
+              <label for="inputPassword6" class="col-form-label">Password</label>
+              <input type="password" id="inputPassword6" class="form-control">
+              <span id="passwordHelpInline" class="form-text">
+                Must be 8-20 characters long.
+              </span>
+            </div>
+          </div>
+          </form>
+        <div class="modal-footer d-flex justify-content-between">
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label">I agree to the terms and conditions.</label>
+          </div>
+          <button type="button" class="btn nav-color" onclick="signup()" data-bs-dismiss="modal" >Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="loginModal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title main-color">Login</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center">
+          <form>
+            <div class="g-3">
+              <label for="inputEmail1" class="col-form-label">Username</label>
+              <input type="text" class="form-control" id="inputUsername">
+            </div>
+            <div class="g-3">
+              <label for="inputPassword6" class="col-form-label">Password</label>
+              <input type="password" id="inputPassword6" class="form-control">
+              <span id="passwordHelpInline" class="form-text">
+                Must be 8-20 characters long.
+              </span>
+            </div>
+          </div>
+          </form>
+        <div class="modal-footer">
+          <button type="button" class="btn nav-color" onclick="login()" data-bs-dismiss="modal">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <nav id="navbar" class="navbar navbar-expand-sm navbar-dark nav-color">
     <div class="container-fluid">
       <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
         <a class="navbar-brand" href="#">
@@ -21,10 +89,10 @@
             <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="about-tab" role="tab" aria-controls="about" aria-selected="false">About</a>
+            <a class="nav-link" id="about-tab" role="tab" aria-controls="about" aria-selected="false" href="#about">About</a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="feature-tab" role="tab" aria-controls="feature" aria-selected="false">Feature</a>
+            <a class="nav-link" id="feature-tab" role="tab" aria-controls="feature" aria-selected="false" href="#feature">Feature</a>
           </li>
           <li class="nav-item" role="presentation">
             <a class="nav-link" id="blog-tab" data-bs-toggle="tab" data-bs-target="#blog" role="tab" aria-controls="blog" aria-selected="false">Blog</a>
@@ -34,13 +102,14 @@
           </li>
         </ul>
         <form class="d-flex">
-          <button class="btn btn-outline-light" type="submit">Login</button>
+          <button class="btn btn-outline-light me-2" type="button" data-bs-toggle="modal" data-bs-target="#signupModal" >Sign Up</button>
+          <button class="btn btn-outline-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal" >Log In</button>
         </form>
       </div>
     </div>
   </nav>
   <div class="tab-content main-content">
-    <div class="tab-pane fade " id="home" role="tabpanel">
+    <div class="tab-pane fade show active" id="home" role="tabpanel">
       <div id="homepageCarousel" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -133,7 +202,7 @@
         </blockquote>
     
       </div>
-      <div class="container-fluid " style="padding: 50px 100px; background-color: #E9EAEC;">
+      <div class="container-fluid" id="about" style="padding: 50px 100px; background-color: #E9EAEC;">
         <div class="d-flex justify-content-around" >
           <div class="me-5">
             <div class="title-border text-center my-5 fs-2">
@@ -179,7 +248,7 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid " style="padding: 25px 50px 100px 100px">
+      <div class="container-fluid" id="feature" style="padding: 25px 50px 100px 100px">
         <p class="title-border text-center my-5 fs-2">
           Featured In
         </p>
@@ -295,7 +364,7 @@
       <div class="container">
         <div class="d-flex justify-content-center">
           <div class="row blog-card-wrapper">
-            <div class="col blog-card-pic">
+            <div class="col blog-card-pic"> 
               <img src="./assets/blog/blog-1.jpg">
             </div>
             <div class="col blog-card-content">
@@ -311,7 +380,7 @@
                 </p>
               </div>
               <div class="blog-card-btn" >
-                <button class="btn nav-color">Read More</button>
+                <a class="btn nav-color" href="./blog-post/post.html">Read More</a>
               </div>
             </div>
           </div>
@@ -336,7 +405,7 @@
                 </p>
               </div>
               <div class="blog-card-btn" >
-                <button class="btn nav-color">Read More</button>
+                <a class="btn nav-color" href="./blog-post/post_2.html">Read More</a>
               </div>
             </div>
           </div>
@@ -358,7 +427,7 @@
                 </p>
               </div>
               <div class="blog-card-btn" >
-                <button class="btn nav-color">Read More</button>
+                <a class="btn nav-color" href="./blog-post/post_3.html">Read More</a>
               </div>
             </div>
           </div>
@@ -380,7 +449,7 @@
                 </p>
               </div>
               <div class="blog-card-btn" >
-                <button class="btn nav-color">Read More</button>
+                <a class="btn nav-color" href="./blog-post/post_4.html">Read More</a>
               </div>
             </div>
           </div>
@@ -403,14 +472,14 @@
                   They showed me photos of the Tree houses they stayed in, the lake and lake houses they visited.</p>
               </div>
               <div class="blog-card-btn" >
-                <button class="btn nav-color">Read More</button>
+                <a class="btn nav-color" href="./blog-post/post_5.html">Read More</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="tab-pane fade show active" id="shop" role="tabpanel">
+    <div class="tab-pane fade" id="shop" role="tabpanel">
       <div class="container">
         <div class="d-flex flex-wrap mb-5">
           <div class="shop-card-wrapper mt-5">
@@ -433,7 +502,7 @@
                   <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
                 </div>
                 <div>
-                  <button class="btn nav-color">Add to Cart</button>
+                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -458,7 +527,7 @@
                   <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
                 </div>
                 <div class="blog-card-btn" >
-                  <button class="btn nav-color">Add to Cart</button>
+                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -486,7 +555,7 @@
                   <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
                 </div>
                 <div class="blog-card-btn" >
-                  <button class="btn nav-color">Add to Cart</button>
+                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -518,7 +587,7 @@
                   <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
                 </div>
                 <div>
-                  <button class="btn nav-color">Add to Cart</button>
+                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -550,7 +619,7 @@
                   <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
                 </div>
                 <div class="blog-card-btn" >
-                  <button class="btn nav-color">Add to Cart</button>
+                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
                 </div>
               </div>
             </div>
@@ -559,7 +628,7 @@
       </div>
     </div>
   </div>
-  <footer>
+  <footer id="footer" >
     <div class="container-fluid nav-color">
       <div class="d-flex justify-content-center pt-4 pb-1"> 
         <div class="px-3" style="border-right:1px solid white ">
@@ -600,7 +669,25 @@
 </body>
 </html>
 <script src="./vendors/js/bootstrap.min.js"></script>
+<script 
+  src="//cdn.jsdelivr.net/npm/sweetalert2@10"
+  src="sweetalert2.all.min.js">
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script>
+
+  function signup() {
+    swal("Sign up successfully!",{dangerMode:true});
+  }
+
+  function login() {
+    swal("Log in successfully!",{dangerMode:true});
+  }
+
+  function cart(){
+    swal("Add to cart successfully!",{dangerMode:true});
+  }
+
   var homepageCarouselWrapper = document.getElementById('homepageCarousel')
   var homepageCarousel = new bootstrap.Carousel(homepageCarouselWrapper)
 
