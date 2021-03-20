@@ -1,0 +1,159 @@
+
+<div class="container">
+  <div class="d-flex flex-wrap mb-5">
+    <div class="shop-card-wrapper mt-5">
+      <div class="d-flex justify-content-center">
+        <div class="shop-card-pic" id="first"></div>
+      </div>
+      <div class="blog-card-content">
+        <div class="blog-card-title main-color">
+          <h5>Key Tag - The Key to Advanture</h5>
+        </div>
+        <div>
+          <p>$10.00</p>
+        </div>
+        <div class="shop-card-desc text-justify">
+          <p>Double-sided embroidered tags for any keys as a reminder that adventure is in your hands.
+          </p>
+        </div>
+        <div class="d-flex justify-content-end">
+          <div class="me-2">
+            <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+          </div>
+          <div>
+            <button class="btn nav-color" onclick="addToCart()">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shop-card-wrapper mt-5">
+      <div class="d-flex justify-content-center">
+        <div class="shop-card-pic" id="second"></div>
+      </div>
+      <div class="blog-card-content">
+        <div class="blog-card-title main-color">
+          <h5>Key Tag - The Key to Freedom</h5>
+        </div>
+        <div>
+          <p>$10.00</p>
+        </div>
+        <div class="shop-card-desc text-justify">
+          <p>Double-sided embroidered tags for any keys as a reminder that freedom is in your hands.
+          </p>
+        </div>
+        <div class="d-flex justify-content-end">
+          <div class="me-2">
+            <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+          </div>
+          <div class="blog-card-btn" >
+            <button class="btn nav-color" onclick="addToCart()">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shop-card-wrapper mt-5">
+      <div class="d-flex justify-content-center">
+        <div class="shop-card-pic" id="third"></div>
+      </div>
+      <div class="blog-card-content">
+        <div class="blog-card-title main-color">
+          <h5>The Wandering Wasp Sticker</h5>
+        </div>
+        <div>
+          <p>$3.00</p>
+        </div>
+        <div class="shop-card-desc text-justify">
+          <p>Die cut outdoor sticker. Paste it on your motorcycle, scooter, suitcase, laptop, wherever!
+          </p>
+          <p>
+            Dimension: 65mm X 100mm
+          </p>
+        </div>
+        <div class="d-flex justify-content-end">
+          <div class="me-2">
+            <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+          </div>
+          <div class="blog-card-btn" >
+            <button class="btn nav-color" onclick="addToCart()">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shop-card-wrapper mt-5">
+      <div class="d-flex justify-content-center">
+        <div class="shop-card-pic" id="forth"></div>
+      </div>
+      <div class="blog-card-content">
+        <div class="blog-card-title main-color">
+          <h5>Poster Calendar 2020</h5>
+        </div>
+        <div>
+          <p>$30.00</p>
+        </div>
+        <div class="shop-card-desc text-justify">
+          <p>Poster Calendar featuring The Wandering Wasp in different country. 
+          </p>
+          <p>
+            Back by popular demand, Attabad Lake in Pakistan and two additional new locations, 
+            Alberobello in Italy and Statues Valley in Qeshm Island, Iran.
+          </p>
+          <p>
+            Size: A2, Laminated
+          </p>
+        </div>
+        <div class="d-flex justify-content-end">
+          <div class="me-2">
+            <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+          </div>
+          <div>
+            <button class="btn nav-color" onclick="addToCart()">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="shop-card-wrapper mt-5">
+      <div class="d-flex justify-content-center">
+        <div class="shop-card-pic" id="fifth"></div>
+      </div>
+      <div class="blog-card-content">
+        <div class="blog-card-title main-color">
+          <h5>Photo Magnet</h5>
+        </div>
+        <div>
+          <p>$20.00</p>
+        </div>
+        <div class="shop-card-desc text-justify pb-2">
+          <p>Adorn your refrigerator, whiteboard or any metal surface with 
+            this photo of the Wandering Wasp crossing the beautiful Attabad Lake.
+          </p>
+          <p>
+            Material: Aluminium
+          </p>
+          <p>
+            Size: 4R
+          </p>
+        </div>
+        <div class="d-flex justify-content-end mt-4">
+          <div class="me-2">
+            <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
+          </div>
+          <div class="blog-card-btn" >
+            <button class="btn nav-color" onclick="addToCart()">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('first').style.backgroundImage = "url('./assets/shops/key-tag.png')"
+  document.getElementById('second').style.backgroundImage = "url('./assets/shops/key-tag-2.jpg')"
+  document.getElementById('third').style.backgroundImage = "url('./assets/shops/sticker.jpg')"
+  document.getElementById('forth').style.backgroundImage = "url('./assets/shops/poster-calendar.jpg')"
+  document.getElementById('fifth').style.backgroundImage = "url('./assets/shops/magnet.png')"
+
+  function addToCart(){
+    swal("Add to cart successfully!",{dangerMode:true});
+  }
+</script>

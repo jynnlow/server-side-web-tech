@@ -81,24 +81,25 @@
   <nav id="navbar" class="navbar navbar-expand-sm navbar-dark nav-color">
     <div class="container-fluid">
       <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-        <a class="navbar-brand" href="#">
-          <img src="./assets/icons/icon.png" alt="" width="70" height="70" class="d-inline-block mx-2 me-4">The Wandering Wasp
+        <a class="navbar-brand" onclick="loadPage('home')" >
+          <img src="./assets/icons/icon.png" alt="" width="70" height="70" class="d-inline-block mx-2 me-4">
+          <span>The Wandering Wasp</span> 
         </a>
         <ul class="nav mb-2 mb-lg-0" role="tablist">
           <li class="nav-item" role="presentation">
-            <a class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
+            <a class="nav-link active" onclick="loadPage('home')">Home</a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="about-tab" role="tab" aria-controls="about" aria-selected="false" href="#about">About</a>
+            <a class="nav-link" onclick="loadSection('about')">About</a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="feature-tab" role="tab" aria-controls="feature" aria-selected="false" href="#feature">Feature</a>
+            <a class="nav-link" onclick="loadSection('feature')">Feature</a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="blog-tab" data-bs-toggle="tab" data-bs-target="#blog" role="tab" aria-controls="blog" aria-selected="false">Blog</a>
+            <a class="nav-link" onclick="loadPage('blog')">Blog</a>
           </li>
           <li class="nav-item" role="presentation">
-            <a class="nav-link" id="shop-tab" data-bs-toggle="tab" data-bs-target="#shop" role="tab" aria-controls="shop" aria-selected="false">Shop to Support</a>
+            <a class="nav-link" onclick="loadPage('shop')">Shop to Support</a>
           </li>
         </ul>
         <form class="d-flex">
@@ -108,525 +109,7 @@
       </div>
     </div>
   </nav>
-  <div class="tab-content main-content">
-    <div class="tab-pane fade show active" id="home" role="tabpanel">
-      <div id="homepageCarousel" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="8" aria-label="Slide 9"></button>
-            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="9" aria-label="Slide 10"></button>
-          </div>
-          <div class="carousel-inner carousel-height ">
-            <div class="carousel-item active carousel-height ">
-                <img src="./assets/images/image1.jpg " class="carousel-image" style="top: -70px;"  alt="...">
-            </div>
-            <div class="carousel-item" style="height: 750px">
-              <img src="./assets/images/image2.jpg " class="carousel-image" style="top: -150px;"  alt="...">
-            </div>
-            <div class="carousel-item" style="height: 750px">
-              <img src="./assets/images/image3.jpg " class="carousel-image" style="top: -300px;"  alt="...">
-            </div>
-            <div class="carousel-item" style="height: 750px">
-              <img src="./assets/images/image5.jpg " class="carousel-image" style="top: -250px;"  alt="...">
-            </div>
-            <div class="carousel-item" style="height: 750px">
-              <img src="./assets/images/image6.jpg " class="carousel-image" style="top: -200px;"  alt="...">
-            </div>
-            <div class="carousel-item" style="height: 750px">
-              <img src="./assets/images/image7.jpg " class="carousel-image" style="top: -300px;"  alt="...">
-            </div>
-            <div class="carousel-item" style="height: 750px">
-              <img src="./assets/images/image9.jpg " class="carousel-image" style="top: -300px;"  alt="...">
-            </div>
-            <div class="carousel-item" style="height: 750px">
-              <img src="./assets/images/image12.jpg " class="carousel-image" style="top: -300px;"  alt="...">
-            </div>
-            <div class="carousel-item" style="height: 750px">
-              <img src="./assets/images/image13.jpg " class="carousel-image" style="top: -300px;"  alt="...">
-            </div>
-            <div class="carousel-item" style="height: 750px">
-              <img src="./assets/images/image14.jpg " class="carousel-image" style="top: -350px;"  alt="...">
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#homepageCarousel"  data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#homepageCarousel"  data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-      </div>
-      <div class="container-fluid " style="padding-top: 50px; padding-bottom: 50px">
-        <div class="title-border text-center my-5 fs-2" >
-          <p class="mb-0">Who Am I?</p>
-        </div>
-        <div class="d-flex justify-content-evenly text-center">
-          <div>
-            <div>
-              <img src="./assets/icons/woman.png" alt="">
-            </div>
-            <p class="my-3 fs-5">A Woman
-            </p>
-          </div>
-          <div>
-            <div>
-              <img src="./assets/icons/scooter.png" alt="">
-            </div>
-            <p class="my-3 fs-5">A Motorcycle Traveller
-            </p>
-          </div>
-          <div>
-            <div>
-              <img src="./assets/icons/book.png" alt="">
-            </div>
-            <p class="my-3 fs-5">A Storyteller
-            </p>
-          </div>
-        </div>
-        <blockquote class="text-justify blockquote" style="padding: 50px 300px;">
-          <p>A perpetual learner of the world driven by an insatiable curiosity. 
-            Undaunted of what lies beyond the comfort zone for raw experiences, 
-            I am always setting new travel goals. 
-            Travelling has allowed me to witness the beauties and tragedies of this world which were transformative to my outlooks. 
-            What I eventually discovered is the gap between our perspectives and reality on the ground in places beyond the borders. 
-            Through storytelling, I hope to forge connection, especially in a time when humanity is overshadowed by dooming media portrayal of the outside world.
-          </p>
-        </blockquote>
-    
-      </div>
-      <div class="container-fluid" id="about" style="padding: 50px 100px; background-color: #E9EAEC;">
-        <div class="d-flex justify-content-around" >
-          <div class="me-5">
-            <div class="title-border text-center my-5 fs-2">
-              <p class="mb-0">About Juvena Huang
-              </p>
-            </div>
-            <div class="lh-lg text-justify">
-              <p>
-                Juvena found her ticket to freedom when she bought her first scooter on her 20th birthday. 
-                Combining her love for riding and travel, a friend’s sudden passing drove Juvena to leave 
-                the safety net of home and job to wander the world on the scooter.
-              </p>
-              <p>
-                Solo but hardly alone, she eventually rode from Singapore to Europe covering 44,000km, 25 countries in 27 months. 
-                Her journey has amassed a following on the Facebook Page “The Wandering Wasp” as she shares her intimate travel 
-                experiences and reveals on the ground aspects of countries hardly shown by mainstream media.
-                With the power of story telling, Juvena hopes to foster  cross-border understanding and tolerance and to 
-                inspire others to discover their potential.
-              </p>
-            </div>
-          </div>
-          <div >
-            <img style="height: 700px; width: 700px;" src="./assets/images/profile_2.png" alt="">
-          </div>
-        </div>
-        <div class="d-flex justify-content-around">
-          <div>
-            <img style="height: 500px; width: 800px;" src="./assets/images/map.jpg" alt="">
-          </div>
-          <div class="ms-5 lh-lg text-justify mt-5">
-            <p>Her ambitious journey was featured in Singapore publications like The Straits Times, Today, Carbuyer and Her World. </p>
-            <p>
-              She was interviewed by overseas published motorcycle adventurers like Lois Pryce for Bikes Magazine (UK) and Nathan Millward for Getting into Adventure: 
-              A Collection of Stories to Inspire (UK), and featured in the photobook <span class="main-color">“I Can. I Will. Women Overlanding The World.” </span>
-              She was even mentioned as one of the 5 Solo Female Travel Bloggers who are Challenging Stereotypes by Popsugar Culture.
-            </p>
-            <p>
-              The Wandering Wasp was thrown into international spotlight when she was featured in Dear Alyne’s video <span class="main-color">“Where Women Can’t Go.” </span>
-            </p>
-            <p>
-              She has plans to explore Western Europe, Africa, and the America continents next.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid" id="feature" style="padding: 25px 50px 100px 100px">
-        <p class="title-border text-center my-5 fs-2">
-          Featured In
-        </p>
-        <nav>
-          <div class="nav nav-tabs" id="nav-tab" role="tablist">
-            <button class="nav-link active" id="nav-publications-tab" data-bs-toggle="tab" data-bs-target="#nav-publications" type="button" role="tab" aria-controls="nav-publications" aria-selected="true">Publications</button>
-            <button class="nav-link" id="nav-keynote-tab" data-bs-toggle="tab" data-bs-target="#nav-keynote" type="button" role="tab" aria-controls="nav-keynote" aria-selected="false">Keynote Speaker</button>
-            <button class="nav-link" id="nav-radio-tab" data-bs-toggle="tab" data-bs-target="#nav-radio" type="button" role="tab" aria-controls="nav-radio" aria-selected="false">Radio</button>
-          </div>
-        </nav>
-        <div class="tab-content" id="nav-tabContent">
-          <div class="tab-pane fade show active" id="nav-publications" role="tabpanel" aria-labelledby="nav-home-tab">
-            <div id="publicationCarousel" class="carousel slide carousel-dark mt-5" data-bs-ride="carousel">
-              <div class="carousel-indicators pt-5">
-                  <button type="button" data-bs-target="#publicationCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#publicationCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#publicationCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#publicationCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              </div>
-              <div class="carousel-inner" style="height: 250px;">
-                <div class="carousel-item active ">
-                  <div class="d-flex justify-content-around" style="height: 80px; margin-top: 50px;">
-                    <img src="./assets/featuredIn/publications/Bike-Magazine-logo.png">
-                    <img src="./assets/featuredIn/publications/Today.png">
-                    <img src="./assets/featuredIn/publications/revzilla.png">
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="d-flex justify-content-around" style="height: 150px; padding-left: 50px;">
-                    <img style="height: 50px; margin-top: 55px;" src="./assets/featuredIn/publications/sphm-her-world.jpg">
-                    <img style="padding-left: 50px;" src="./assets/featuredIn/publications/ScooterLabLogo.png">
-                    <img src="./assets/featuredIn/publications/Motoren-en-Toerisme.png">
-                  </div> 
-                </div>
-                <div class="carousel-item">
-                  <div class="d-flex justify-content-around" style="height: 200px;">
-                    <img style="height: 80px; margin-top: 20px;" src="./assets/featuredIn/publications/red-bull.png">
-                    <img src="./assets/featuredIn/publications/mothership.png">
-                    <img src="./assets/featuredIn/publications/carbuyer.png">
-                    <img src="./assets/featuredIn/publications/the-straits-times.png">
-                  </div> 
-                </div>
-                <div class="carousel-item">
-                  <div class="d-flex justify-content-around" style="height: 150px;">
-                    <img src="./assets/featuredIn/publications/Central_News_Agency.png">
-                    <img style="height: 60px; margin-top: 30px;" src="./assets/featuredIn/publications/getting-into-adventure.jpg">
-                    <img style="margin-bottom: 10px;" src="./assets/featuredIn/publications/popsugar.png">
-                    <img style="height:100px; margin-top: 10px;" src="./assets/featuredIn/publications/expologo.png">
-                  </div> 
-                </div>
-              </div>
-            </div>  
-          </div> 
-          <div class="tab-pane fade" id="nav-keynote" role="tabpanel" aria-labelledby="nav-keynote-tab">
-            <div id="keynote" class="carousel slide carousel-dark mt-5" data-bs-ride="carousel">
-              <div class="carousel-indicators pt-5">
-                  <button type="button" data-bs-target="#keynote" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#keynote" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#keynote" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                  <button type="button" data-bs-target="#keynote" data-bs-slide-to="3" aria-label="Slide 4"></button>
-              </div>
-              <div class="carousel-inner" style="height: 250px;">
-                <div class="carousel-item active">
-                  <div class="d-flex justify-content-around" style="height: 100px;">
-                    <img style="height: 180px;" src="./assets/featuredIn/keynotes/Illumina.png">
-                    <img style="height: 80px; margin-top: 50px;"src="./assets/featuredIn/keynotes/Campus-Party.png">
-                    <img style="height: 80px; margin-top: 50px;"src="./assets/featuredIn/keynotes/changyi.png">
-                    <img style="height: 150px; margin-top: 20px;" src="./assets/featuredIn/keynotes/heidrick-and-struggles.png">
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="d-flex justify-content-around" style="height: 150px; ">
-                    <img src="./assets/featuredIn/keynotes/Taiwan-Tourism.png">
-                    <img style="height: 200px;" src="./assets/featuredIn/keynotes/Emirates-Travellers-Festival.jpeg">
-                    <img style="height: 100px; margin-top: 40px;"src="./assets/featuredIn/keynotes/Global-Pak-Tech-Summit.png">
-                    <img style="height: 100px; margin-top: 20px;"src="./assets/featuredIn/keynotes/transfer-wise.png">
-                  </div> 
-                </div>
-                <div class="carousel-item">
-                  <div class="d-flex justify-content-around" style="height: 150px; ">
-                    <img src="./assets/featuredIn/keynotes/the-singapore-bike.png">
-                    <img src="./assets/featuredIn/keynotes/SFF.png">
-                    <img src="./assets/featuredIn/keynotes/DBS.jpg">
-                    <img src="./assets/featuredIn/keynotes/pink-ribbon.png">
-                  </div> 
-                </div>  
-                <div class="carousel-item">
-                  <div class="d-flex justify-content-around" style="height: 150px; ">
-                    <img style="height: 70px; margin-top: 40px;" src="./assets/featuredIn/keynotes/DHL.png">
-                    <img src="./assets/featuredIn/keynotes/The-Wicked-Wallop.jpg">
-                    <img src="./assets/featuredIn/keynotes/MCN.png">
-                    <img style="height: 200px; margin-top: -25px;" src="./assets/featuredIn/keynotes/bmwmc.png">
-                  </div> 
-                </div>  
-              </div>
-            </div>
-          </div>
-          <div class="tab-pane fade" id="nav-radio" role="tabpanel" aria-labelledby="nav-radio-tab">
-            <div id="radioCarousel" class="carousel slide carousel-dark mt-5" data-bs-ride="carousel">
-              <div class="carousel-inner" style="height: 250px;">
-                <div class="carousel-item active">
-                  <div class="d-flex justify-content-center" style="height: 100px;">
-                    <img style="height: 180px;" src="./assets/featuredIn/radio/RM-World-Travel-.png">
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tab-pane fade" id="blog" role="tabpanel">
-      <div class="container">
-        <div class="d-flex justify-content-center">
-          <div class="row blog-card-wrapper">
-            <div class="col blog-card-pic"> 
-              <img src="./assets/blog/blog-1.jpg">
-            </div>
-            <div class="col blog-card-content">
-              <div class="blog-card-title main-color">
-                <h2>Celebrating Women Riders Month with Harley Davidson Singapore</h2>
-              </div>
-              <div class="blog-card-desc text-justify">
-                <p>May is the month when we celebrate Mothers’ Day. Little did I know, May is also Women Riders Month. 
-                  In celebration of this special month, Harley Davidson Singapore organised a ride solely for the ladies. 
-                  Sorry guys, you will be declined except for the organisers.
-                  It is a good time to bitch about our male counterparts without their presence. 
-                  Kidding, no, we have better things to do like enjoying the company and conversations without any machismo.
-                </p>
-              </div>
-              <div class="blog-card-btn" >
-                <a class="btn nav-color" href="./blog-post/post.html">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <div class="row blog-card-wrapper">
-            <div class="col blog-card-pic">
-              <img src="./assets/blog/blog-2.jpg">
-            </div>
-            <div class="col  blog-card-content">
-              <div class="blog-card-title main-color">
-                <h2>North Thailand – Chiang Mai and Bangkok</h2>
-              </div>
-              <div class="blog-card-desc text-justify">
-                <p>The road from Pai to Chiang Mai is just another 136km. More meandering roads were expected in this stretch. 
-                  At one point the bend was 90 degrees and up a 45 degrees incline.
-                  Nearing Chiang Mai, I had a small mishap. Maybe I was too tired. While we were stuck in the traffic, 
-                  I rest my back against my backpack on the rear. I got a little too comfortable and ended up falling to the side, 
-                  almost knocking the tuk tuk next to me. The tuk tuk driver got out and checked on her vehicle immediately. 
-                  A chap on a motorcycle nearby, stopped and scrambled to help me up. Once he checked that I was ok, he quickly left. 
-                  I did not even get a chance to know his name and thank him.
-                </p>
-              </div>
-              <div class="blog-card-btn" >
-                <a class="btn nav-color" href="./blog-post/post_2.html">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <div class="row blog-card-wrapper">
-            <div class="col blog-card-pic">
-              <img src="./assets/blog/blog-4.jpg">
-            </div>
-            <div class="col  blog-card-content">
-              <div class="blog-card-title main-color">
-                <h2>Japan – Motorcycle Street in Tokyo, Mount Fuji in Shizuoka!</h2>
-              </div>
-              <div class="blog-card-desc text-justify">
-                <p>I was sent on a two weeks study trip in Japan, Shizuoka, of which, I spent the weekend in Tokyo. 
-                  Months before the trip,  I was given the uphill task of learning Japanese which I did not manage 
-                  to master very well.Whenever travelling to countries where the spoken language is not one I speak, 
-                  I would very least learn the following essential phrases and expression.
-                </p>
-              </div>
-              <div class="blog-card-btn" >
-                <a class="btn nav-color" href="./blog-post/post_3.html">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <div class="row blog-card-wrapper">
-            <div class="col blog-card-pic">
-              <img src="./assets/blog/blog-5.jpg">
-            </div>
-            <div class="col  blog-card-content">
-              <div class="blog-card-title main-color">
-                <h2>North Thailand – Long Neck Karen Village in Mae Hong Song</h2>
-              </div>
-              <div class="blog-card-desc text-justify">
-                <p>For that day’s ride, I wore another windproof jacket on top of my riding jacket. 
-                  The winter in Thailand was clearly underestimated despite friends’ warning.
-                  We started the day with a punctured tyre on Mike’s Sertao 650 and scouring Mae Sariang 
-                  for a bike repair shop where Mike’s tyre tubes was patched.
-                </p>
-              </div>
-              <div class="blog-card-btn" >
-                <a class="btn nav-color" href="./blog-post/post_4.html">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <div class="row blog-card-wrapper">
-            <div class="col blog-card-pic">
-              <img src="./assets/blog/blog-3.jpg">
-            </div>
-            <div class="col  blog-card-content">
-              <div class="blog-card-title main-color">
-                <h2>Italy Part IV – Pompeii, Herculaneum, Naples, Plastic bags as Decoy against Snatch Thieves
-                </h2>
-              </div>
-              <div class="blog-card-desc text-justify">
-                <p>Khao Sok National Park – one of my favorite place in the 3 weeks trip. My friend Andy and Sim Eng suggested this place 
-                  and since it is on the way from Koh Samui to Phuket, we can pay a visit. Andy and Sim Eng spent around 2 and half months 
-                  riding around Thailand Laos etc. 
-                  They lent me their maps and shared a lot of information with me, a first time rider entering Thailand.
-                  They showed me photos of the Tree houses they stayed in, the lake and lake houses they visited.</p>
-              </div>
-              <div class="blog-card-btn" >
-                <a class="btn nav-color" href="./blog-post/post_5.html">Read More</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tab-pane fade" id="shop" role="tabpanel">
-      <div class="container">
-        <div class="d-flex flex-wrap mb-5">
-          <div class="shop-card-wrapper mt-5">
-            <div class="d-flex justify-content-center">
-              <div class="shop-card-pic" id="first"></div>
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-card-title main-color">
-                <h5>Key Tag - The Key to Advanture</h5>
-              </div>
-              <div>
-                <p>$10.00</p>
-              </div>
-              <div class="shop-card-desc text-justify">
-                <p>Double-sided embroidered tags for any keys as a reminder that adventure is in your hands.
-                </p>
-              </div>
-              <div class="d-flex justify-content-end">
-                <div class="me-2">
-                  <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
-                </div>
-                <div>
-                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="shop-card-wrapper mt-5">
-            <div class="d-flex justify-content-center">
-              <div class="shop-card-pic" id="second"></div>
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-card-title main-color">
-                <h5>Key Tag - The Key to Freedom</h5>
-              </div>
-              <div>
-                <p>$10.00</p>
-              </div>
-              <div class="shop-card-desc text-justify">
-                <p>Double-sided embroidered tags for any keys as a reminder that freedom is in your hands.
-                </p>
-              </div>
-              <div class="d-flex justify-content-end">
-                <div class="me-2">
-                  <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
-                </div>
-                <div class="blog-card-btn" >
-                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="shop-card-wrapper mt-5">
-            <div class="d-flex justify-content-center">
-              <div class="shop-card-pic" id="third"></div>
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-card-title main-color">
-                <h5>The Wandering Wasp Sticker</h5>
-              </div>
-              <div>
-                <p>$3.00</p>
-              </div>
-              <div class="shop-card-desc text-justify">
-                <p>Die cut outdoor sticker. Paste it on your motorcycle, scooter, suitcase, laptop, wherever!
-                </p>
-                <p>
-                  Dimension: 65mm X 100mm
-                </p>
-              </div>
-              <div class="d-flex justify-content-end">
-                <div class="me-2">
-                  <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
-                </div>
-                <div class="blog-card-btn" >
-                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="shop-card-wrapper mt-5">
-            <div class="d-flex justify-content-center">
-              <div class="shop-card-pic" id="forth"></div>
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-card-title main-color">
-                <h5>Poster Calendar 2020</h5>
-              </div>
-              <div>
-                <p>$30.00</p>
-              </div>
-              <div class="shop-card-desc text-justify">
-                <p>Poster Calendar featuring The Wandering Wasp in different country. 
-                </p>
-                <p>
-                  Back by popular demand, Attabad Lake in Pakistan and two additional new locations, 
-                  Alberobello in Italy and Statues Valley in Qeshm Island, Iran.
-                </p>
-                <p>
-                  Size: A2, Laminated
-                </p>
-              </div>
-              <div class="d-flex justify-content-end">
-                <div class="me-2">
-                  <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
-                </div>
-                <div>
-                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="shop-card-wrapper mt-5">
-            <div class="d-flex justify-content-center">
-              <div class="shop-card-pic" id="fifth"></div>
-            </div>
-            <div class="blog-card-content">
-              <div class="blog-card-title main-color">
-                <h5>Photo Magnet</h5>
-              </div>
-              <div>
-                <p>$20.00</p>
-              </div>
-              <div class="shop-card-desc text-justify pb-2">
-                <p>Adorn your refrigerator, whiteboard or any metal surface with 
-                  this photo of the Wandering Wasp crossing the beautiful Attabad Lake.
-                </p>
-                <p>
-                  Material: Aluminium
-                </p>
-                <p>
-                  Size: 4R
-                </p>
-              </div>
-              <div class="d-flex justify-content-end mt-4">
-                <div class="me-2">
-                  <input class="form-control shop-card-qty" type="number" id="quantity" name="quantity" min="1" max="5" value="1">
-                </div>
-                <div class="blog-card-btn" >
-                  <button class="btn nav-color" onclick="cart()">Add to Cart</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div id="content" class="main-content">
   </div>
   <footer id="footer" >
     <div class="container-fluid nav-color">
@@ -669,12 +152,17 @@
 </body>
 </html>
 <script src="./vendors/js/bootstrap.min.js"></script>
-<script 
-  src="//cdn.jsdelivr.net/npm/sweetalert2@10"
-  src="sweetalert2.all.min.js">
-</script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./vendors/js/sweetalert.js"></script>
+<script src="./vendors/js/jquery.js"></script>
+
 <script>
+  $(document).ready(function(){
+    loadPage('home');
+  });
+  
+  function loadPage(page){
+    $("#content").load(`./pages/${page}.html`);
+  }
 
   function signup() {
     swal("Sign up successfully!",{dangerMode:true});
@@ -684,22 +172,12 @@
     swal("Log in successfully!",{dangerMode:true});
   }
 
-  function cart(){
-    swal("Add to cart successfully!",{dangerMode:true});
+  function loadSection(section){
+    loadPage('home');
+    setTimeout(() => {
+      $('html, body').animate({
+        scrollTop: $(`#${section}`).offset().top
+      }, 500);
+    },500)
   }
-
-  var homepageCarouselWrapper = document.getElementById('homepageCarousel')
-  var homepageCarousel = new bootstrap.Carousel(homepageCarouselWrapper)
-
-  var myCarousel = document.getElementById('publicationCarousel')
-  var carousel = new bootstrap.Carousel(myCarousel)
-
-  var keynoteWrapper = document.getElementById('keynote')
-  var keynote = new bootstrap.Carousel(keynoteWrapper)
-
-  document.getElementById('first').style.backgroundImage = "url('./assets/shops/key-tag.png')"
-  document.getElementById('second').style.backgroundImage = "url('./assets/shops/key-tag-2.jpg')"
-  document.getElementById('third').style.backgroundImage = "url('./assets/shops/sticker.jpg')"
-  document.getElementById('forth').style.backgroundImage = "url('./assets/shops/poster-calendar.jpg')"
-  document.getElementById('fifth').style.backgroundImage = "url('./assets/shops/magnet.png')"
 </script>

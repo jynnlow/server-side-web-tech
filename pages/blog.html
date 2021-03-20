@@ -1,0 +1,122 @@
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <div class="row blog-card-wrapper">
+      <div class="col blog-card-pic"> 
+        <img src="./assets/blog/blog-1.jpg">
+      </div>
+      <div class="col blog-card-content">
+        <div class="blog-card-title main-color">
+          <h2>Celebrating Women Riders Month with Harley Davidson Singapore</h2>
+        </div>
+        <div class="blog-card-desc text-justify">
+          <p>May is the month when we celebrate Mothers’ Day. Little did I know, May is also Women Riders Month. 
+            In celebration of this special month, Harley Davidson Singapore organised a ride solely for the ladies. 
+            Sorry guys, you will be declined except for the organisers.
+            It is a good time to bitch about our male counterparts without their presence. 
+            Kidding, no, we have better things to do like enjoying the company and conversations without any machismo.
+          </p>
+        </div>
+        <div class="blog-card-btn" >
+          <a class="btn nav-color" onclick="loadBlog('1')">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="row blog-card-wrapper">
+      <div class="col blog-card-pic">
+        <img src="./assets/blog/blog-2.jpg">
+      </div>
+      <div class="col  blog-card-content">
+        <div class="blog-card-title main-color">
+          <h2>North Thailand – Chiang Mai and Bangkok</h2>
+        </div>
+        <div class="blog-card-desc text-justify">
+          <p>The road from Pai to Chiang Mai is just another 136km. More meandering roads were expected in this stretch. 
+            At one point the bend was 90 degrees and up a 45 degrees incline.
+            Nearing Chiang Mai, I had a small mishap. Maybe I was too tired. While we were stuck in the traffic, 
+            I rest my back against my backpack on the rear. I got a little too comfortable and ended up falling to the side, 
+            almost knocking the tuk tuk next to me. The tuk tuk driver got out and checked on her vehicle immediately. 
+            A chap on a motorcycle nearby, stopped and scrambled to help me up. Once he checked that I was ok, he quickly left. 
+            I did not even get a chance to know his name and thank him.
+          </p>
+        </div>
+        <div class="blog-card-btn" >
+          <a class="btn nav-color" onclick="loadBlog('2')">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="row blog-card-wrapper">
+      <div class="col blog-card-pic">
+        <img src="./assets/blog/blog-4.jpg">
+      </div>
+      <div class="col  blog-card-content">
+        <div class="blog-card-title main-color">
+          <h2>Japan – Motorcycle Street in Tokyo, Mount Fuji in Shizuoka!</h2>
+        </div>
+        <div class="blog-card-desc text-justify">
+          <p>I was sent on a two weeks study trip in Japan, Shizuoka, of which, I spent the weekend in Tokyo. 
+            Months before the trip,  I was given the uphill task of learning Japanese which I did not manage 
+            to master very well.Whenever travelling to countries where the spoken language is not one I speak, 
+            I would very least learn the following essential phrases and expression.
+          </p>
+        </div>
+        <div class="blog-card-btn" >
+          <a class="btn nav-color" onclick="loadBlog('3')">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="row blog-card-wrapper">
+      <div class="col blog-card-pic">
+        <img src="./assets/blog/blog-5.jpg">
+      </div>
+      <div class="col  blog-card-content">
+        <div class="blog-card-title main-color">
+          <h2>North Thailand – Long Neck Karen Village in Mae Hong Song</h2>
+        </div>
+        <div class="blog-card-desc text-justify">
+          <p>For that day’s ride, I wore another windproof jacket on top of my riding jacket. 
+            The winter in Thailand was clearly underestimated despite friends’ warning.
+            We started the day with a punctured tyre on Mike’s Sertao 650 and scouring Mae Sariang 
+            for a bike repair shop where Mike’s tyre tubes was patched.
+          </p>
+        </div>
+        <div class="blog-card-btn" >
+          <a class="btn nav-color" onclick="loadBlog('4')">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-center">
+    <div class="row blog-card-wrapper">
+      <div class="col blog-card-pic">
+        <img src="./assets/blog/blog-3.jpg">
+      </div>
+      <div class="col  blog-card-content">
+        <div class="blog-card-title main-color">
+          <h2>Italy Part IV – Pompeii, Herculaneum, Naples, Plastic bags as Decoy against Snatch Thieves
+          </h2>
+        </div>
+        <div class="blog-card-desc text-justify">
+          <p>Khao Sok National Park – one of my favorite place in the 3 weeks trip. My friend Andy and Sim Eng suggested this place 
+            and since it is on the way from Koh Samui to Phuket, we can pay a visit. Andy and Sim Eng spent around 2 and half months 
+            riding around Thailand Laos etc. 
+            They lent me their maps and shared a lot of information with me, a first time rider entering Thailand.
+            They showed me photos of the Tree houses they stayed in, the lake and lake houses they visited.</p>
+        </div>
+        <div class="blog-card-btn" >
+          <a class="btn nav-color" onclick="loadBlog('5')">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function loadBlog(page){
+    $("#content").load(`./pages/blog/post_${page}.html`);
+  }
+</script>
